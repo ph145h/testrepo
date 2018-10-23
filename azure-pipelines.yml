@@ -1,5 +1,7 @@
 pool:
   vmImage: 'Ubuntu 16.04'
+
+  steps:
   - task: CMake@1
     inputs:
     #workingDirectory: 'build' # Optional
