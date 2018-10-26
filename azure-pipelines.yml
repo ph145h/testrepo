@@ -1,8 +1,18 @@
-pool:
-  vmImage: 'Ubuntu 16.04'
-
+jobs:
+- job: Windows
+  pool:
+    vmImage: 'VS2017-Win2016'
   steps:
   - task: CMake@1
-    inputs:
-    #workingDirectory: 'build' # Optional
-    #cmakeArgs: # Optional
+
+- job: Linux
+  pool:
+    vmImage: 'Ubuntu 16.04'
+  steps:
+  - task: CMake@1
+
+- job: macOS
+  pool:
+    vmImage: 'macOS 10.13'
+  steps:
+  - task: CMake@1
