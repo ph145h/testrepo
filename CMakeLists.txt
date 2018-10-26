@@ -2,7 +2,7 @@ cmake_minimum_required (VERSION 2.8.11)
 project (testrepo)
 set(CMAKE_CXX_STANDARD 11)
 set (testrepo_VERSION_MAJOR 0)
-set (testrepo_VERSION_MINOR 1)
+set (testrepo_VERSION_MINOR 2)
 
 configure_file (
         "${PROJECT_SOURCE_DIR}/TestConfig.h.in"
