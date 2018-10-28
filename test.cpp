@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "TestConfig.h"
+#include <windows.h> /* Testing that this breaks macOS and Linux builds... */
 
 int main (int argc, char *argv[])
 {

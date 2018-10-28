@@ -9,11 +9,8 @@ configure_file (
         "${PROJECT_BINARY_DIR}/TestConfig.h"
 )
 include_directories("${PROJECT_BINARY_DIR}")
-include_directories("${PROJECT_SOURCE_DIR}/build")
-#
-#add_subdirectory (libraries)
-#include_directories("${PROJECT_SOURCE_DIR}/libraries")
-#
-#add_subdirectory(libraries)
+
+add_subdirectory (libraries)
+include_directories("${PROJECT_SOURCE_DIR}/libraries")
 
 add_executable(test test.cpp)
