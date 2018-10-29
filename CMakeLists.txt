@@ -13,10 +13,10 @@ if (WIN32)
 endif (WIN32)
 
 if (UNIX)
+    configure_file ("${PROJECT_SOURCE_DIR}/config/linux/linux.h.in" "${PROJECT_BINARY_DIR}/os.h")
     if (APPLE)
         configure_file ("${PROJECT_SOURCE_DIR}/config/macos/macos.h.in" "${PROJECT_BINARY_DIR}/os.h")
     endif(APPLE)
-    configure_file ("${PROJECT_SOURCE_DIR}/config/linux/linux.h.in" "${PROJECT_BINARY_DIR}/os.h")
 endif (UNIX)
 
 add_executable(test test.cpp)
