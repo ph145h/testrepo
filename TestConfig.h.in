@@ -1,2 +1,0 @@
-#define testrepo_VERSION_MAJOR @testrepo_VERSION_MAJOR@
-#define testrepo_VERSION_MINOR @testrepo_VERSION_MINOR@
