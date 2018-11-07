@@ -1,0 +1,3 @@
+#ifndef PLATFORM
+#define PLATFORM "Linux"
+#endif

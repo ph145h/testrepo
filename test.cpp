@@ -1,13 +1,27 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include "TestConfig.h"
-#include "os.h"
+#include <MainConfig.h>
+#include <osConfig.h>
+#include <iostream>
+#include <thread>
 
-const char var1[] = FOO;
+const char osType[] = PLATFORM;
+
+void workerFunc()
+{
+    std::cout << "Worker: running" << std::endl;
+    std::cout << "Worker: finished" << std::endl;
+}
 
 int main (int argc, char *argv[])
 {
-    fprintf(stdout,"Version: %i.%i\n", testrepo_VERSION_MAJOR, testrepo_VERSION_MINOR);
-    fprintf(stdout,"SYSTEM hi Trombs: %s\n", var1);
+    std::cout << "Version: " << VERSION_MAJOR << "." << VERSION_MINOR << std::endl;
+    std::cout << "SYSTEM: " << osType << std::endl;
+
+    std::thread workerThread(workerFunc);
+
+    std::cout << "main: waiting for thread" << std::endl;
+
+    workerThread.join();
+
+    std::cout << "main: done" << std::endl;
     return 0;
 }
